@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Button, Form, Modal } from "semantic-ui-react";
 import { AppDispatch } from "../store/store";
 import { useDispatch, useSelector } from "react-redux";

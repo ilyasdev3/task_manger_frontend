@@ -32,7 +32,7 @@ export const createTask = createAsyncThunk(
 // get all task
 export const getAllTask = createAsyncThunk(
   "task/getAllTask",
-  async (task, { rejectWithValue }) => {
+  async (_, { rejectWithValue }) => {
     try {
       const response = await axiosInstance().get("/task/tasks");
 

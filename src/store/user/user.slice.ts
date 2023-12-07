@@ -13,7 +13,7 @@ const initialState: IUserTypes = {
 // get user
 export const getUser = createAsyncThunk(
   "user/getUser",
-  async (user, { rejectWithValue }) => {
+  async (_, { rejectWithValue }) => {
     try {
       const response = await axiosInstance().get("/user/user");
 
