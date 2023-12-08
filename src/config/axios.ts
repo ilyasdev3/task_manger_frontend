@@ -1,17 +1,11 @@
 import axios from "axios";
+const env = import.meta.env;
 
 const axiosInstance = () => {
   const token = localStorage.getItem("taskManagerToken");
 
   //setting the enviroment
-  let url: any = "http://localhost:5000";
-  if (process.env.NODE_ENV === "production") {
-    url = process.env.REACT_APP_BACKEND_URL;
-  } else if (process.env.NODE_ENV === "development") {
-    url = process.env.REACT_APP_BACKEND_URL;
-  } else {
-    url = process.env.REACT_APP_BACKEND_URL;
-  }
+  let url: any = env.VITE_APP_BACKEND_URL;
 
   const enviroment = `${url}/api`;
   return axios.create({
