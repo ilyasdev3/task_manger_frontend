@@ -1,6 +1,6 @@
-# React + TypeScript + Vite
+# Live demo : https://task-manger-frontend-ilyasdev3.vercel.app
 # git clone repo
 # yarn install
 # start backend app
 # yarn dev
-# app started on http://locahlhost:5173
+
