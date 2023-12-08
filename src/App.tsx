@@ -8,6 +8,8 @@ function App() {
   return (
     <>
       <Routes>
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
         <Route
           path="/"
           element={
@@ -16,8 +18,6 @@ function App() {
             </AuthGuard>
           }
         />
-        <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
       </Routes>
     </>
   );
