@@ -26,11 +26,7 @@ const AuthGuard = ({ children }: AuthGuardProps) => {
         setToken(false);
         navigate("/login");
       } else {
-        // Log statement to see when token check is performed
-        console.log("Checking token...");
         await dispatch(verifyToken());
-        // Log statement to see when token verification is completed
-        console.log("Token verification completed");
       }
     };
 
@@ -40,11 +36,8 @@ const AuthGuard = ({ children }: AuthGuardProps) => {
   useEffect(() => {
     const handleUser = async () => {
       if (isValidToken) {
-        // Log statement to see when user fetching is initiated
-        console.log("Fetching user...");
         await dispatch(getUser());
-        // Log statement to see when user fetching is completed
-        console.log("User fetching completed");
+
         setToken(true);
       }
     };
