@@ -14,6 +14,7 @@ type AuthGuardProps = {
 
 const AuthGuard = ({ children }: AuthGuardProps) => {
   const navigate = useNavigate();
+
   const dispatch = useDispatch<AppDispatch>();
   const [token, setToken] = useState(true);
 
